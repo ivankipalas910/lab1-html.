@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Форма — реєстрація студента</title>
+</head>
+<body>
+  <h1>Лабораторна робота №1</h1>
+  <h2>Робота з формами</h2>
+  <h3>Виконав(ла): Іван Кіпалас, група АнД-31, варіант №2</h3>
+  <a href="index.html">На головну</a>
+  <hr />
+
+  <h3>Варіант 2. Реєстрація студента</h3>
+
+  <p>
+    Опис завдання: необхідно розробити форму для <b>реєстрації студента</b> у веб-системі. 
+    Форма повинна містити два блоки — <i>«Основні дані»</i> та <i>«Особисті дані»</i>. 
+    У першому вводяться ПІБ, група (зі списку), форма навчання (бюджет/контракт), 
+    коротка інформація та електронна адреса. У другому — паспортні дані, ідентифікаційний код, 
+    рік народження та стать. На формі обов’язково має бути кнопка відправлення.
+  </p>
+
+  <form action="" method="post">
+    <fieldset>
+      <legend>Основні дані</legend>
+
+      <p>
+        <label>ПІБ:
+          <input id="fio" type="text" name="fio" />
+        </label>
+      </p>
+
+      <p>
+        <label>Група:
+          <select name="group">
+            <option>АнД-31</option>
+            <option>АнД-32</option>
+            <option>АнД-33</option>
+            <option>АнД-34</option>
+          </select>
+        </label>
+      </p>
+
+      <p>Форма навчання:
+        <label><input type="radio" name="funding" value="budget" /> Бюджет</label>
+        <label><input type="radio" name="funding" value="contract" /> Контракт</label>
+      </p>
+
+      <p>
+        Коротка інформація:<br />
+        <textarea name="about" rows="4" cols="50"></textarea>
+      </p>
+
+      <p>
+        Email:
+        <input type="email" name="email" />
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <p>
+        Паспорт:
+        <input type="text" name="passport" />
+      </p>
+
+      <p>
+        Ідентифікаційний код:
+        <input type="text" name="tin" />
+      </p>
+
+      <p>
+        Рік народження:
+        <input type="number" name="birth_year" min="1970" max="2010" />
+      </p>
+
+      <p>Стать:
+        <label><input type="radio" name="gender" value="m" /> Чоловіча</label>
+        <label><input type="radio" name="gender" value="f" /> Жіноча</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Відправити</button>
+      <button type="reset">Очистити</button>
+    </p>
+  </form>
+</body>
+</html>
